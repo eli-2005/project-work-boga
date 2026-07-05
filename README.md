@@ -42,7 +42,7 @@ Questo repository contiene il codice sorgente della pagina web sviluppata per il
 
 ## 🔗 Link alla pagina
 
-
+https://eli-2005.github.io/project-work-boga/
 
 ---
 
