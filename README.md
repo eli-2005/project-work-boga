@@ -14,7 +14,7 @@ Questo repository contiene il codice sorgente della pagina web sviluppata per il
 ---
 
 ## Anteprima della pagina web
-- **Hero** - riguarda il messaggio principale della pagina
+- **Hero** - messaggio principale della pagina
   
   ![Hero](immagini/hero.png)
   
