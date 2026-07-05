@@ -1,0 +1,583 @@
+/* stile per la pagina BF S.p.A. */
+
+/* importazione dei font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* variabili CSS globali */
+:root {
+    --blu: #1a5495;
+    --verde: #247b24;
+    --verde-chiaro: #e8f5eb;
+    --bianco: #ffffff;
+    --grigio-chiaro: #f5f5f3;
+    --grigio-corpo: #444444;
+    --font-titolo: 'Iosevka Charon', sans-serif;
+    --font-corpo: 'DM Sans', sans-serif;
+    --ombra: 0 4px 20px rgba(0, 0, 0, 0.07);
+    --raggio: 8px;
+}
+
+/* stili generali per la pagina */
+/* rimuove margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* scroll fluido per tutta la pagina */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* spazio per la barra di navigazione fissa */
+}
+
+
+/* HEADER */
+header {
+    background-color: var(--blu);
+    color: var(--bianco);
+    padding: 24px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky; /* rende l'header fisso durante lo scroll */
+    top: 0;
+    z-index: 1000; /* assicura che l'header sia sopra altri elementi */
+}
+
+/* contenitore del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* impedisce al logo di ridursi troppo */
+    margin-left: 20px; 
+}
+
+/* immagine del logo */
+.logo img {
+    height: 60px; 
+    width: auto; 
+    filter: brightness(0) invert(1); 
+}
+
+/* spinge la barra di navigazione verso destra */
+nav {
+    margin-left: auto; 
+}
+
+/* lista delle voci di nav senza pallini e affiancate orizzontalmente */
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 32px; 
+}
+
+/* nav senza sottolineatura e con colore bianco */
+.nav-link a {
+    color: var(--bianco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--font-titolo);
+    transition: color 0.2s ease; /* transizione fluida per il cambio di colore */
+}
+
+/* effetto hover sui link di nav */
+.nav-link a:hover {
+    color: var(--verde-chiaro);
+}
+
+
+/* BODY */
+/* stili del corpo della pagina */
+body {
+    font-family: var(--font-corpo);
+    color: var(--grigio-corpo);
+    background-color: var(--bianco);
+    line-height: 1.7; /* interlinea per una maggiore leggibilità */
+}
+
+/* stile comune per le sezioni di contenuto */
+section {
+    padding: 72px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* titoli h2 delle sezioni */
+section h2 {
+    font-family: var(--font-titolo);
+    font-size: 2rem;
+    color: var(--blu);
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* linea decorativa sotto i titoli h2 */
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 8%;
+    height: 3px;
+    background-color: var(--blu);
+    border-radius: var(--raggio);
+}
+
+/* testo dei paragrafi */
+section p {
+    font-size: 1.05rem;
+    color: var(--grigio-corpo);
+    text-align: justify; /* giustifica il testo per un aspetto più professionale */
+}
+
+
+/* SEZIONE HERO */
+#hero {
+    padding: 72px;
+    max-width: 100%;
+}
+
+#hero h1 {
+    font-family: var(--font-titolo);
+    font-size: 2.4rem;
+    color: var(--blu);
+    margin-bottom: 16px;
+    text-align: center; 
+}
+
+#hero p {
+    font-family: var(--font-corpo);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}   
+
+#hero img {
+    background-color: var(--grigio-chiaro);
+    padding: 5px;
+    width: 100%;
+    max-width: 1000px; 
+    box-shadow: var(--ombra);
+    margin: 0 auto; 
+    display: block; /* rimuove lo spazio sotto l'immagine */   
+}
+
+
+/* SEZIONE ABOUT */
+/* riduce il padding per la sezione about per un aspetto più compatto */
+#about {
+    padding-bottom: 24px;
+}
+
+#about p {
+    margin-bottom: 20px; 
+    max-width: 1000px;
+}
+
+#about img {
+    background-color: var(--grigio-chiaro);
+    padding: 5px;
+    width: 100%;
+    max-width: 1000px; 
+    box-shadow: var(--ombra);
+    display: block;
+}
+
+/* citazione con stile blockquote */
+.citazione {
+    background-color: var(--grigio-chiaro);
+    color: var(--grigio-corpo);
+    padding: 32px;
+    margin: 40px auto; 
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.citazione p {
+    font-size: 1.2rem;
+    font-family: var(--font-titolo);
+    font-style: italic;
+    color: var(--grigio-corpo);
+    margin-bottom: 8px;
+}
+
+.citazione cite {
+    font-size: 1rem;
+    font-family: var(--font-titolo);
+    font-style: normal;
+    color: var(--verde);
+    text-align: right;
+    display: block;
+}
+
+.citazione cite::before {
+    content: '— '; /* aggiunge un trattino prima del nome dell'autore */
+}
+
+.citazione p:hover {
+    color: var(--verde);
+}
+
+
+/* SEZIONE PERSONE */
+/* tre card affiancate con icone e testo */
+#persone p {
+    max-width: 1000px;
+}
+
+.persone-grid {
+    display: grid;
+    gap: 90px; 
+    max-width: 1100px;
+    margin-top: 40px;
+    grid-template-columns: repeat(3, 200px); /* tre colonne di larghezza fissa */
+    justify-content: center; /* centra le card all'interno del contenitore */
+}
+
+.persone1, .persone2, .persone3 {
+    background-color: var(--blu);
+    font-family: var(--font-corpo);
+    color: var(--bianco);
+    border-radius: var(--raggio);
+    padding: 24px 28px;
+    aspect-ratio: 1; /* forma quadrata */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.persone1 h3, .persone2 h3, .persone3 h3 {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.icon-placeholder1, .icon-placeholder2, .icon-placeholder3 {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%); /* filtra l'immagine per renderla bianca */
+}
+
+
+/* SEZIONE KPI */
+/* linea decorativa centrata */
+#kpi h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* stili per i KPI */
+#kpi {
+    background-image: linear-gradient(to right, #e8f5eb, #ffffff); /* sfondo sfumato */
+    max-width: 100%;
+    padding: 72px 60px;
+}
+
+#kpi h2 {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+/* griglia con tre card affiancate per i KPI */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* tre colonne di larghezza uguale */
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+/* stili per le card dei KPI */
+.kpi1, .kpi2, .kpi3 {
+    background-color: var(--bianco);
+    border-radius: var(--raggio);
+    padding: 24px 30px;
+    box-shadow: var(--ombra);
+    border: 3px solid var(--verde-chiaro); /* bordo colorato */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* animazione hover */
+}
+
+/* titolo h3 dentro le card kpi */
+.kpi1 h3, .kpi2 h3, .kpi3 h3 {
+    font-family: var(--font-corpo);
+    font-size: 1.2rem;
+    color: var(--verde);
+    margin-bottom: 10px;
+}
+
+/* testo dentro le card kpi */
+.kpi1 p, .kpi2 p, .kpi3 p {
+    font-size: 0.94rem;
+    color: var(--grigio-corpo);
+    text-align: left;
+}
+
+/* icone nelle card kpi: dimensione fissa e colore verde */
+.icon-placeholder4, .icon-placeholder5, .icon-placeholder6 {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px;
+    filter: invert(35%) sepia(60%) saturate(500%) hue-rotate(90deg) brightness(90%); /* filtra l'immagine per renderla del colore verde */
+}
+
+/* effetto hover sulle card: si alzano leggermente */
+.kpi1:hover, .kpi2:hover, .kpi3:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+
+/* SEZIONE RENDICONTAZIONE */
+.rendicontazione-area {
+    background-image: linear-gradient(to left, #f5f5f3, #ffffff); /* sfondo sfumato */
+    max-width: 100%;
+    padding: 71px;
+    text-align: center;
+}
+
+.rendicontazione-area h2 {
+    max-width: 1100px;
+    margin: 0 auto 24px auto;
+}
+
+/* linea decorativa centrata */
+.rendicontazione-area h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* testo paragrafo */
+.rendicontazione-area p {
+    color: var(--grigio-corpo);
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+}
+
+.rendicontazione-area .report-features {
+    max-width: 1100px;
+    margin: 0 auto 22px auto;
+}
+
+/* lista caratteristiche del report */
+.report-features {
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    color: var(--grigio-corpo);
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 12px;
+    margin-bottom: 36px;
+}
+
+/* singola voce con emoji */
+.report-features li {
+    font-size: 1rem;
+    color: var(--grigio-corpo);
+    padding-left: 36px;
+    position: relative;
+}
+
+.report-features li::before {
+    content: '📌';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.95rem;
+}
+
+/* riquadro bianco con angoli arrotondati per il download */
+.download-box {
+    background-color: var(--bianco);
+    border-radius: var(--raggio);
+    border: none;
+    box-shadow: var(--ombra);
+    padding: 28px 32px;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+/* testo all'interno del riquadro di download */
+.download-box-testo h3 {
+    font-family: var(--font-titolo);
+    font-size: 1.3rem;
+    color: var(--blu);
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+/* testo descrittivo all'interno del riquadro di download */
+.download-box-testo p {
+    font-size: 1rem;
+    color: var(--blu);
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+/* stile del bottone */
+.btn {
+    display: inline-block;
+    background-color: var(--verde);
+    color: var(--bianco);
+    padding: 12px 32px;
+    border-radius: 80px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.icona-btn {
+    width: 24px;
+    height: 24px;
+}
+
+/* effetto hover sul bottone */
+.btn:hover {
+    background-color: var(--blu);
+    transform: translateY(-2px); /* leggero sollevamento */
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--blu);
+    color: rgba(255,255,255,0.8);
+    padding: 48px 60px;
+}
+
+/* griglia a due colonne per le sezioni del footer */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* titoli h3 nel footer */
+.footer-section h3 {
+    font-family: var(--font-titolo);
+    font-size: 1rem;
+    color: var(--bianco);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* testo paragrafo nel footer */
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    text-align: center;
+    padding: 0 20px; /* padding orizzontale per evitare che il testo tocchi i bordi su mobile */
+    padding-bottom: 20px; /* spazio sotto il testo per separarlo dal copyright */
+}
+
+/* link nel footer */
+.footer-section a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* hover sui link che diventano bianchi */
+.footer-section a:hover {
+    color: var(--bianco);
+}
+
+/* stile testo copyright */
+.copyright {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 24px;
+}
+
+
+/* RESPONSIVE per dispositivi mobili */
+@media (max-width: 768px) {
+    /* HEADER */
+    /* logo e nav in colonna */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 24px;
+        gap: 16px;
+        position: static; /* rimuove lo sticky su mobile */
+    }
+
+    /* nav non va a destra */
+    nav {
+        margin-left: 0;
+    }
+
+    /* link di nav si avvicinano */
+    .nav-link {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* SEZIONI */
+    /* padding ridotto su mobile */
+    section {
+        padding: 40px 24px;
+    }
+
+    /* HERO */ 
+    #hero {
+        padding: 40px 24px;
+    }
+
+    .citazione {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .citazione p {
+        text-align: left; /* rimuove il giustificato su mobile */
+    }
+
+    /* PERSONE */
+    .persone-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* KPI */
+    #kpi {
+        padding: 40px 24px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* RENDICONTAZIONE */
+    .rendicontazione-area {
+        padding: 40px 24px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 40px 24px;
+    }
+}
