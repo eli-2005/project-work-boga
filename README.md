@@ -7,7 +7,7 @@ PW **17**. Sviluppo di una pagina web per il download dei report di sostenibilit
 ---
 
 ## Descrizione
-Questo repository contiene il codice sorgente della pagina web sviluppata per il Project Work del corso di laurea **Informatica per le aziende digitali (L-31)**. L'obiettivo della pagina web è: 
+Questo repository contiene il codice sorgente della pagina web sviluppata per il Project Work del corso di laurea **Informatica per le aziende digitali (L-31)**. L'obiettivo della pagina è: 
 - comunicare l'impegno dell'azienda **Bonifiche Ferraresi S.p.A.** in ambito di sostenibilità ambientale e sociale;
 - consentire il download della **Dichiarazione Non Finanziaria** (2023).
 
